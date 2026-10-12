@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+    <div>
+    <h1 style="color: white;">Todo List</h1>
+    <input type="text" id="task" placeholder="Enter your todo list">
+    <ul id="taskList"></ul>
+    <button id="btn" style="width: 300px;
+    height: 40px;
+    ">Add Task</button>
+    </div>
+</body>
+
+
+<style>
+    body{
+        background-color: rgb(255, 255, 255);
+        display: flex; 
+        color: rgb(37, 37, 36);
+        align-items: center;
+        justify-content: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    div{
+        background-color: rgb(54, 54, 53,0.7);
+        border-radius: 10px;
+        width: auto;
+        text-align: center;
+        height: auto;
+        margin-top: 300px;
+        padding:50px;
+        
+     
+    }
+    input{
+        width: 300px;
+        height: 50px;
+        font-size: 17px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border: none;
+        border-radius: 4px;
+  }
+  button{
+    font-size: 17px;
+    color: rgb(37, 37, 36);
+    background-color: tan;
+    border: none;
+    margin-left: 10px;
+
+  }
+  ul{
+     margin-right: 50px;
+     display: block;
+  }
+  span{
+    font-size: 25px;
+    color: white;
+    
+  }
+</style>
+<script>
+
+    $(document).ready(function(){
+
+        $('#btn').click(function(){
+            let task = $('#task').val().trim();
+            let tasklist = $('#taskList');
+           
+
+            if (task) {
+                let ul = $('<ul>');
+                let span = $('<span>').text(task);
+                let removeBtn = $('<button>').text("Remove");
+                let edit = $('<button>').text("edit");
+                let editOk = $('<button>').text("OK");
+                    editOk.hide();
+              
+        edit.on('click', function(){
+              $('#task').val(span.text());
+                editOk.show();
+              
+        })
+
+        editOk.on('click', function(){
+        let edited = $('#task').val();
+     
+        if(edited){
+               span.text(edited);
+              $('#task').val('');
+              editOk.hide();
+
+        }})
+
+         removeBtn.on('click', function(){
+            ul.remove();
+        });
+
+          ul.append(span, edit, editOk, removeBtn);
+
+          $('#taskList').append(ul);
+          $('#task').val('');
+
+            }
+            
+        });
+  });
+
+     
+</script>
+</html>
