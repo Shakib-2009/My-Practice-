@@ -621,9 +621,14 @@ margin-top: 30px;
      } 
      .hero .hero-content h1 {
          font-size: 45px; 
+         background-color: rgb(11, 31, 58,0.5);
         } 
         .hero .hero-content h3 
-        { font-size: 18px; }
+        { font-size: 18px; 
+    }
+     }
+     .hero{
+        background-position: 70% center; 
      }
 
      @media (max-width:1150px) {

@@ -28,7 +28,7 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     div{
-        background-color: rgb(54, 54, 53,0.7);
+        background-color: rgba(54, 54, 53,0.7);
         border-radius: 10px;
         width: auto;
         text-align: center;
@@ -69,12 +69,12 @@
     $(document).ready(function(){
 
         $('#btn').click(function(){
-            let task = $('#task').val();
+            let task = $('#task').val().trim();
             let tasklist = $('#taskList');
            
 
             if (task) {
-                let ul = $('<ul>');
+                let ul = $('<li>');
                 let span = $('<span>').text(task);
                 let removeBtn = $('<button>').text("Remove");
                 let edit = $('<button>').text("edit");
@@ -88,7 +88,7 @@
         })
 
         editOk.on('click', function(){
-        let edited = $('#task').val();
+        let edited = $('#task').val().trim();
      
         if(edited){
                span.text(edited);
@@ -110,7 +110,6 @@
             
         });
   });
-
      
 </script>
 </html>

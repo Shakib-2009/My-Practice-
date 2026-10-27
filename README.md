@@ -1,35 +1,40 @@
-# 🚀 **My Practice Repository**
+# Full Stack Practice
 
-Welcome to my coding journey! 👋  
-This repository is where I practice, experiment, and improve my programming skills. 💻
+## Lessons
 
-## 📂 **What's Inside?**
+| Topic | Folder |
+| --- | --- |
+| HTML | [HTML](HTML/) |
+| CSS | [CSS](CSS/) |
+| JavaScript | [javascript](javascript/) |
+| jQuery | [javascript/jquery](javascript/jquery/) |
+| Calculator | [javascript/calculator](javascript/calculator/) |
+| Node.js | [backend/nodejs](backend/nodejs/) |
+| Express | [backend/express](backend/express/) |
 
-- 🧩 **Coding Challenges** — Exercises to sharpen my skills
-- 🛠️ **Mini Projects** — Small projects to try new ideas
-- 📚 **Learning Notes** — Concepts and useful tips
-- 🧪 **Experiments** — Exploring different approaches
+## Project
 
-## 🎯 **My Goals**
+[SK Learning website](Mars-tech%20HTML%20CSS%20project/SK-Learning.html) — HTML, CSS, JavaScript, and images in `Mars-tech HTML CSS project/`.
 
-- ✅ Write clean and readable code
-- 🧠 Improve my problem-solving skills
-- 🌱 Learn new programming concepts
-- 🔄 Practice Git and GitHub
-- 🔥 Stay consistent and keep improving
+Open the HTML files in a browser to view the frontend exercises. Run Node.js exercises from their own folder so relative file paths resolve correctly.
 
-## 🚀 **Getting Started**
+## Run the calculator server
 
-Clone the repository:
+```sh
+cd backend/express
+npm install
+npm start
+```
 
-    git clone https://github.com/Shakib-2009/My-Practice-.git
+Open http://localhost:3000/calculator/ for the calculator. The `/` and `/about` routes are Express response examples. Stop the server with Ctrl+C.
 
-Open the folder and explore my practice files! 📁
+## Learning notes
 
-## 💬 **Feedback**
+- `javascript/calc.html` is a two-number addition exercise; `javascript/calculator/` is the button-based calculator.
+- `javascript/todo.html` is an unfinished vanilla JavaScript exercise. The jQuery todo example is in `javascript/jquery/jq.html`.
+- `%` in the calculator is the JavaScript remainder operator.
+- SK Institute page filenames are `courses.html`, `instructors.html`, and `admissions.html`.
 
-Suggestions and helpful feedback are always welcome! 🤝
+## Goals
 
----
-
-### ✨ **Practice. Learn. Build. Repeat.**
+Practice clean code, problem solving, programming concepts, and Git/GitHub consistently. Suggestions and helpful feedback are welcome.

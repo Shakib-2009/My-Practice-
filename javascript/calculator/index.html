@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<input type="text" id="input" placeholder="0" aria-label="Calculator display" readonly>
+
+<div id="buttons">
+    <div>
+<button onclick="result('%')">%</button>
+<button onclick="dlt()">Clear</button>
+<button onclick="result('/')">/</button>
+<button onclick="clearontime()">Dlt</button>
+    </div>
+    <div>
+<button onclick="result('7')">7</button>
+<button onclick="result('8')">8</button>
+<button onclick="result('9')">9</button>
+<button onclick="result('*')">*</button>
+    </div>
+    <div>
+<button onclick="result('4')">4</button>
+<button onclick="result('5')">5</button>
+<button onclick="result('6')">6</button>
+<button onclick="result('-')">-</button>
+    </div>
+    <div>
+<button onclick="result('1')">1</button>
+<button onclick="result('2')">2</button>
+<button onclick="result('3')">3</button>
+<button onclick="result('+')">+</button>
+    </div>
+    <div>
+
+<button onclick="result('0')">0</button>
+<button onclick="result('.')">.</button>
+<button onclick="calculate()" id="equal">=</button>
+    </div>
+</div>
+
+<script src="java.js"></script>
+</body>
+</html>
